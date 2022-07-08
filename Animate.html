@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+        <style>
+            #d1 {
+                background: blue;
+                width: 50px;
+                height: 50px;
+                position: relative;
+                top: 20px;
+                left: 10px;
+            }
+        </style>
+    
+    <body>
+        <input type="button" value="Animate" id="btn1" />
+        <div id="d1"></div>
+        <script src="https://code.jquery.com/jquery-2.2.4.js"
+                integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
+                integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY="
+                crossorigin="anonymous"></script>
+        <script>
+        // check the page rediness.
+        $(document).ready(function () {
+
+            $("#btn1").click(function () {
+                $("#d1").animate({
+                    left: "100px",
+                    top: "80px",
+                    opacity: "0.5",
+                    height: "100px",
+                    width:"100px"
+                }, 3000).animate({
+                    left: "50px",
+                    top: "20px",
+                    opacity: "1",
+                    height: "50px",
+                    width: "50px"
+                }, 3000).slideUp(2000).slideDown(2000);
+            })
+
+        });
+        </script>
+    </body>
+</html>
+

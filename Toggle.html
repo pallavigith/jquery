@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <style>
+        .cls {
+            background: blue;
+            width: 100px;
+            height: 80px;
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+    </style>
+    
+        <input type="button" value="Add /Remove Css" id="btn1" />
+        <div id="d1">this is sample div </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.js"
+                integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
+                integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY="
+                crossorigin="anonymous"></script>
+        <script>
+        // check the page rediness.
+        $(document).ready(function () {
+
+            $("#btn1").click(function () {
+                $("#d1").toggleClass("cls");
+            });
+
+        });
+        </script>
+
+
+    </body>
+</html>

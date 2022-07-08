@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <style>
+    </style>
+    <p id="p1">
+        This Is Sample Paragraph In Page
+    </p>
+    Enter a number :<input type="text" id="t1" /> <br />
+    Enter a number :<input type="text" id="t2" /> <br />
+    Result :<input type="text" id="t3" /> <br />
+    <div id="d1"></div>
+    <div id="d2"></div>
+   
+    <input type="button" value="Hide" id=" btn1" />
+    <input type="button" value="Show" id=" btn2" />
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+    <script>src = "https://code.jquery.com/ui/1.13.1/jquery-ui.js"
+        integrity = "Sha256-6XMVI0zB*cRzfZjqKcD01PBsAy3f1DASr1C8SxCpInY="
+        crossorigin = "anonymous" ></script>
+
+    <script>
+        //check the page rediness.
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#p1").hide(function () {
+                    alert('Done');
+
+
+                });
+            });
+
+            $("#btn2").click(function () {
+                $("#p1").show();
+            })
+
+
+        });
+        $(document).ready(function () {
+
+            $("#btn1").click(function () {
+                var a = $("#t1").val();  // .value property in javascript
+                var b = $("#t2").val();
+                var c = parseInt(a) + parseInt(b);
+                $("#t3").val(c);
+                $("#d1").text("Addition is " + c);  // same as innerHTML
+                $("#d2").html("<b>Addition is " + c+"</b>");
+            });
+
+        });
+
+
+    </script>
+
+
+</body>
+</html>
